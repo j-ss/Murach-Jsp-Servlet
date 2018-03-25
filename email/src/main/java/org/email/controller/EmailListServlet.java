@@ -1,6 +1,7 @@
 package org.email.controller;
 
 import org.email.dao.UserDao;
+import org.email.dao.UserDaoWithoutHibernate;
 import org.email.entity.User;
 
 import java.io.IOException;
@@ -38,7 +39,10 @@ public class EmailListServlet extends HttpServlet {
         message="please fill all details correct";
             url="/index.jsp";
       }else {
-        UserDao.save(user);
+        //hinernate save method
+        //UserDao.save(user);
+        //jdbc save method
+        System.out.println(UserDaoWithoutHibernate.insert(user));
         req.setAttribute("user", user);
         url = "/thanks.jsp";
       }

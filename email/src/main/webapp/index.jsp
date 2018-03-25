@@ -27,7 +27,7 @@
     <input type="checkbox" name="bluegrass">bluegrass<br>
     <input type="checkbox" name="jazz">jazz</p>
     <p>select a country<br>
-    <select name="country" multiple><!-- size="3" multiple -->
+    <select name="country" multiple size="1"><!-- size="3" multiple -->
         <option value="IN">India</option>
         <option value="RUS">Russia</option>
         <option value="US">America</option>
